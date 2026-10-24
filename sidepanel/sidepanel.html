@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compact Vertical Tabs</title>
+  <link rel="stylesheet" href="sidepanel.css">
+</head>
+<body>
+  <div id="sidebar-container">
+    <!-- Header chevron matching Edge vertical tabs -->
+    <div id="sidebar-header" title="Compact Tabs">
+      <svg class="header-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </div>
+
+    <!-- Scrollable tab icon list -->
+    <div id="tabs-list" role="tablist" aria-label="Open tabs"></div>
+
+    <!-- Divider -->
+    <div class="divider"></div>
+
+    <!-- New Tab (+) button -->
+    <button id="new-tab-btn" title="New tab (Ctrl+T)" aria-label="New tab">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+        <line x1="12" y1="5" x2="12" y2="19"></line>
+        <line x1="5" y1="12" x2="19" y2="12"></line>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Dynamic floating tooltip for hovered tab -->
+  <div id="tab-tooltip" class="tooltip hidden" role="tooltip">
+    <span id="tooltip-title">Tab Title</span>
+    <button id="tooltip-close" title="Close tab" aria-label="Close tab">&times;</button>
+  </div>
+
+  <script src="sidepanel.js"></script>
+</body>
+</html>
